@@ -18,5 +18,21 @@ services:
       timeout: 5s
       retries: 10
 
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: GraphHacks-falkordb
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - GraphHacks_falkordb_data:/var/lib/falkordb/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 volumes:
   GraphHacks_pgdata:
+  GraphHacks_falkordb_data:
