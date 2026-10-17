@@ -9,6 +9,11 @@ __pycache__/
 
 # Jupyter temporary files
 .ipynb_checkpoints/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
 
 # IDE files
 .vscode/
@@ -17,3 +22,5 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+
