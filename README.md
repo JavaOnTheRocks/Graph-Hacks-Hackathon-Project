@@ -1,5 +1,30 @@
 # Personal Assistant
 
+## 🎬 Project Demo Videos
+
+Explore our **Personal AI Assistant** through this three-part video series, covering the system architecture, live functionality, and observability.
+
+### Part 1: Introduction, Tech Stack & System Overview
+An introduction to the project, its technology stack, and overall system architecture.
+
+▶️ [**Watch Part 1 on Loom**](https://www.loom.com/share/0e079f58e95c4bea864522a1cca4b1df)
+
+### Part 2: Live Demo of the Personal Assistant
+A live walkthrough demonstrating the Personal AI Assistant in action.
+
+▶️ [**Watch Part 2 on Loom**](https://www.loom.com/share/7451738c57a4406cbafc5f5efe16a6a0)
+
+### Part 3: Tracing & Observability — System Live Demo
+A walkthrough focused on system tracing and observability.
+
+▶️ [**Watch Part 3 on Loom**](https://www.loom.com/share/bc7753a69f8e4f23bb3eedcec6fba5ac)
+
+---
+
+**Recommended viewing order:** Start with Part 1 to understand the architecture, continue to Part 2 for the live product demonstration, and finish with Part 3 to explore tracing and observability.
+
+
+
 ### A Memory-Aware AI Assistant Powered by FalkorDB, Graph-Based Long-Term Memory
 
 Personal Assistant is an AI-powered assistant designed to maintain useful context across conversations, remember user preferences, and provide more personalized responses over time.
@@ -39,6 +64,83 @@ Together, these components provide the foundation for a more continuous, context
 ## Technology Stack
 
 ![Personal Assistant Technology Stack](docs/technology-stack.png)
+
+## 📂 Project Structure
+
+```text
+Graph-Hacks/
+├── app/
+│   ├── agent/
+│   │   ├── __init__.py
+│   │   ├── chat.py
+│   │   ├── graph.py
+│   │   ├── nodes.py
+│   │   └── state.py
+│   │
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   └── schemas.py
+│   │
+│   ├── memory/
+│   │   ├── __init__.py
+│   │   ├── conversation_store.py
+│   │   ├── long_term.py
+│   │   └── short_term.py
+│   │
+│   ├── __init__.py
+│   ├── config.py
+│   ├── db.py
+│   ├── llm.py
+│   ├── main.py
+│   └── models.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
+├── docs/
+│   ├── agent-architecture.png
+│   ├── System-Architecture.png
+│   └── technology-stack.png
+│
+├── tests/
+│   ├── memo_initallization.ipynb
+│   ├── model.ipynb
+│   ├── openweather_api.ipynb
+│   └── tavily_api.ipynb
+│
+├── agent.ipynb
+├── docker-compose.yml
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
+```
+
+### Main Components
+
+- **`app/agent/`** — LangGraph agent workflow, nodes, state, and chat logic.
+- **`app/api/`** — FastAPI routes and request/response schemas.
+- **`app/memory/`** — Short-term memory, long-term memory, and conversation history storage.
+- **`frontend/`** — React and Vite user interface, reusable components, and backend API integration.
+- **`docs/`** — System architecture, agent architecture, and technology stack diagrams.
+- **`tests/`** — Notebooks used for experimenting with memory initialization, models, and external APIs.
+- **`docker-compose.yml`** — Configuration for local supporting services.
+- **`requirements.txt`** — Python dependencies.
+- **`.env.example`** — Example environment-variable configuration for local setup.
+- **`README.md`** — Project overview, architecture, installation, and local execution instructions.
+
 
 ## System Architecture
 
@@ -354,6 +456,7 @@ The example requests use demonstration identifiers. A production deployment shou
 Do not treat a client-supplied `user_id` as proof of identity.
 
 
-
+## Final Deployment architecture:
+![Deployment architecture](docs/)
 
 
