@@ -227,7 +227,7 @@ The project also uses PostgreSQL, FalkorDB, and Qdrant for conversation persiste
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/JavaOnTheRocks/Graph-Hacks-Hackathon-Project.git
 cd "Graph Hacks"
 ```
 
